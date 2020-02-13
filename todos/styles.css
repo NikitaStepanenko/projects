@@ -1,0 +1,115 @@
+body {
+  color: #888;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/*--------------primary header------------------*/
+
+
+.logo{
+    margin: 0 auto;
+    color: #EAD7D7;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 110px;
+}
+
+
+
+/*--------------primary footer------------------*/
+.primary-footer{
+  color: #EAD7D7;
+    text-align: center;
+    margin: 100px auto ;
+    padding-bottom: ;
+    font-size: 14px;
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
+
+/*--------------list------------------*/
+.main {
+  padding: 10px;
+  
+  width: 100%;
+  max-width: 483px;
+  margin: 0 auto;
+  border: 2px solid rgb(214, 137, 109, .2);
+  border-radius: 5px;
+  
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+
+}
+
+
+.add-todo,
+.input-todo {
+    border-radius: 5px;
+    font-size: 22px;
+    opacity: .3;
+    background-color: #FEFEFE;
+    text-align: center;
+    height: 60px ;
+    width: 100%;
+    shadow
+}
+
+
+
+.list li {
+
+  
+  font-size: 22px;
+  font-weight: 100;
+}
+
+
+.icon-check{
+  position: ;
+  display: block;
+  color: rgb(132, 101, 167);
+  height: 15px;
+  width: 15px;
+}
+
+.icon-check:hover{
+  color: rgb(156, 137, 179);
+}
+
+.icon-delete {
+  display: block;
+  height: 15px;
+  width: 15px;
+  color: rgb(102, 33, 33);
+}
+
+.icon-delete:hover {
+  color: rgb(128, 105, 105);
+}
+
+.stroke {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+
+.goal {
+  display: -webkit-box;
+  justify-content: space-between;
+}
+
+.todo-contant {
+  margin: 0 5px;
+  font-size: 20px;
+  opacity: .3;
+  background-color: #FEFEFE;
+}
