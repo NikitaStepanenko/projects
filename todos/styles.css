@@ -1,5 +1,5 @@
 body {
-  color: #888;
+  color: rgb(128, 4, 4);
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /*--------------primary footer------------------*/
 .primary-footer{
-  color: #EAD7D7;
+    color: #EAD7D7;
     text-align: center;
     margin: 100px auto ;
     padding-bottom: ;
@@ -36,7 +36,7 @@ body {
   width: 100%;
   max-width: 483px;
   margin: 0 auto;
-  border: 2px solid rgb(214, 137, 109, .2);
+  border: 2px solid rgba(168, 214, 109, 0.2);
   border-radius: 5px;
   
 }
@@ -62,7 +62,11 @@ body {
     shadow
 }
 
-
+.scroll {
+  height: 250px;
+    overflow : auto;
+    padding: 5px;  
+}
 
 .list li {
 
@@ -73,26 +77,24 @@ body {
 
 
 .icon-check{
-  position: ;
   display: block;
-  color: rgb(132, 101, 167);
+  color: rgb(255, 255, 255);
   height: 15px;
   width: 15px;
 }
 
 .icon-check:hover{
-  color: rgb(156, 137, 179);
+  color: black;
 }
 
-.icon-delete {
+.icon-trash {
   display: block;
   height: 15px;
   width: 15px;
-  color: rgb(102, 33, 33);
-}
 
-.icon-delete:hover {
-  color: rgb(128, 105, 105);
+  background: url(./assets/trash-alt-regular.svg) center no-repeat;
+  background-size: contain;
+  opacity: 0;
 }
 
 .stroke {
@@ -107,9 +109,35 @@ body {
   justify-content: space-between;
 }
 
-.todo-contant {
+.todo-content {
   margin: 0 5px;
   font-size: 20px;
-  opacity: .3;
-  background-color: #FEFEFE;
+  opacity: .5;
+;
+}
+
+.hide {
+  display: none;
+}
+
+.goal-from-list:hover {
+  color: rgb(95, 66, 133);
+  background-color: rgb(207, 173, 173);
+  border-radius: 5px;
+}
+
+.goal-from-list:hover .icon-trash {
+  opacity: 0.5;
+  color: ;
+}
+
+.icon-trash:hover  {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+.delete {
+  position: relative;
+  width: 16px;  
+  height: 16px;
 }
