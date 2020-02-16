@@ -1,5 +1,19 @@
+/* VARIABLES */
+:root {
+  --todo-text: rgb(56, 27, 27);
+  --main-dark: #262f36;
+  --hover-dark: #6f8292;
+  --white: #fff;
+  --border: #625e5e8f;
+  --black: rgb(65, 65, 65);
+  --grey: rgba(204, 204, 204, 0.849);
+  --cian: cian; 
+}
+
+
 body {
-  color: rgb(128, 4, 4);
+  background-color: var(--grey);
+  color: var(--main-text);
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -10,7 +24,7 @@ body {
 
 .logo{
     margin: 0 auto;
-    color: #EAD7D7;
+    color: var(--main-dark);
     text-align: center;
     padding-bottom: 3rem;
     font-size: 110px;
@@ -20,10 +34,9 @@ body {
 
 /*--------------primary footer------------------*/
 .primary-footer{
-    color: #EAD7D7;
+    color: var(--main-dark);
     text-align: center;
     margin: 100px auto ;
-    padding-bottom: ;
     font-size: 14px;
     padding-bottom: 44px;
     padding-top: 44px;
@@ -36,7 +49,7 @@ body {
   width: 100%;
   max-width: 483px;
   margin: 0 auto;
-  border: 2px solid rgba(168, 214, 109, 0.2);
+  border: 2px solid var(--border);
   border-radius: 5px;
   
 }
@@ -63,8 +76,8 @@ body {
 }
 
 .scroll {
-  height: 250px;
-    overflow : auto;
+    height: 250px;
+    overflow: auto;
     padding: 5px;  
 }
 
@@ -76,12 +89,6 @@ body {
 }
 
 
-.icon-check{
-  display: block;
-  color: rgb(255, 255, 255);
-  height: 15px;
-  width: 15px;
-}
 
 .icon-check:hover{
   color: black;
@@ -89,10 +96,16 @@ body {
 
 .icon-trash {
   display: block;
-  height: 15px;
-  width: 15px;
-
   background: url(./assets/trash-alt-regular.svg) center no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+.icon-check {
+  display: block;
+  height: 18px;
+  width: 24px;
+  background: url(/assets/check-circle-solid.svg) center no-repeat;
   background-size: contain;
   opacity: 0;
 }
@@ -120,15 +133,19 @@ body {
   display: none;
 }
 
+.goal-from-list {
+  text-decoration: none;
+}
+
 .goal-from-list:hover {
-  color: rgb(95, 66, 133);
+  color: var(-);
   background-color: rgb(207, 173, 173);
   border-radius: 5px;
 }
 
 .goal-from-list:hover .icon-trash {
   opacity: 0.5;
-  color: ;
+  color: red;
 }
 
 .icon-trash:hover  {
@@ -136,8 +153,57 @@ body {
   opacity: 1 !important;
 }
 
+.goal-from-list:hover .icon-check {
+  opacity: 0.5;
+  color: red;
+}
+
+.icon-check:hover  {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
 .delete {
   position: relative;
-  width: 16px;  
-  height: 16px;
+  width: 24px;  
+  height: 18px;
+}
+
+.cross-out {
+  text-decoration: line-through;
+}
+
+/*Options*/
+
+.todo-options { 
+  font-size: 18px;
+  color: var(--main-dark);
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.all-todos {
+  cursor: pointer;
+}
+
+.complited-todos {
+  cursor: pointer;
+}
+
+.active-todos {
+  cursor: pointer;
+}
+
+.all-todos:hover {
+  color: var(--hover-dark);
+}
+
+.complited-todos:hover {
+ color: var(--hover-dark);
+}
+
+.active-todos:hover {
+  color: var(--hover-dark);
 }
