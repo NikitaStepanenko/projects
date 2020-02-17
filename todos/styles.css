@@ -36,7 +36,7 @@ body {
 .primary-footer{
     color: var(--main-dark);
     text-align: center;
-    margin: 100px auto ;
+    margin: 70px auto 0px;
     font-size: 14px;
     padding-bottom: 44px;
     padding-top: 44px;
@@ -96,6 +96,8 @@ body {
 
 .icon-trash {
   display: block;
+  height: 19px;
+  width: 24px;
   background: url(./assets/trash-alt-regular.svg) center no-repeat;
   background-size: contain;
   opacity: 0;
@@ -103,9 +105,9 @@ body {
 
 .icon-check {
   display: block;
-  height: 18px;
+  height: 19px;
   width: 24px;
-  background: url(/assets/check-circle-solid.svg) center no-repeat;
+  background: url(./assets/check-circle-solid.svg) center no-repeat;
   background-size: contain;
   opacity: 0;
 }
@@ -165,8 +167,6 @@ body {
 
 .delete {
   position: relative;
-  width: 24px;  
-  height: 18px;
 }
 
 .cross-out {
