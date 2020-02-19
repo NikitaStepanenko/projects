@@ -1,13 +1,206 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* VARIABLES */
+:root {
+  --todo-text: rgb(56, 27, 27);
+  --main-dark: #262f36;
+  --hover-dark: #6f8292;
+  --white: #fff;
+  --border: #625e5e8f;
+  --black: rgb(65, 65, 65);
+  --grey: rgba(204, 204, 204, 0.849);
+  --cian: cian;
+}
+
+body {
+  background-color: var(--grey);
+  color: var(--main-text);
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+/*--------------primary header------------------*/
+
+.logo {
+  color: var(--main-dark);
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 110px;
+}
+
+/*--------------primary footer------------------*/
+.primary-footer {
+  color: var(--main-dark);
+  text-align: center;
+  margin: 70px auto 0px;
+  font-size: 14px;
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+
+/*--------------list------------------*/
+.main {
+  padding: 10px;
+
+  width: 100%;
+  max-width: 483px;
+  margin: 0 auto;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+}
+
+.add-todo,
+.input-todo {
+  border-radius: 5px;
+  font-size: 22px;
+  opacity: 0.3;
+  background-color: #fefefe;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  shadow: ;
+}
+
+.scroll {
+  height: 350px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.list li {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.icon-check:hover {
+  color: black;
+}
+
+.icon-trash {
+  display: block;
+  height: 19px;
+  width: 24px;
+  background: url(./assets/trash-alt-regular.svg) center no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+.icon-check {
+  display: block;
+  height: 19px;
+  width: 24px;
+  background: url(./assets/check-circle-solid.svg) center no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+.stroke {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.goal {
+  display: -webkit-box;
+  justify-content: space-between;
+}
+
+.todo-content {
+  margin: 0 5px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.hide {
+  display: none;
+}
+
+.goal-from-list {
+  text-decoration: none;
+}
+
+.goal-from-list:hover {
+  color: var(-);
+  background-color: rgb(207, 173, 173);
+  border-radius: 5px;
+}
+
+.goal-from-list:hover .icon-trash {
+  opacity: 0.5;
+  color: red;
+}
+
+.icon-trash:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+.goal-from-list:hover .icon-check {
+  opacity: 0.5;
+  color: red;
+}
+
+.icon-check:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+.delete {
+  position: relative;
+}
+
+/*Options*/
+
+.todo-options {
+  font-size: 18px;
+  color: var(--main-dark);
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.all-todos {
+  cursor: pointer;
+}
+
+.complited-todos {
+  cursor: pointer;
+}
+
+.active-todos {
+  cursor: pointer;
+}
+
+.all-todos:hover {
+  color: var(--hover-dark);
+}
+
+.complited-todos:hover {
+  color: var(--hover-dark);
+}
+
+.active-todos:hover {
+  color: var(--hover-dark);
+}
+
+.checked {
+  text-decoration: line-through;
 }
