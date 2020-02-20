@@ -6,6 +6,7 @@ import TodoOptions from "./components/TodoOptions";
 
 class App extends Component {
   state = {
+    optionStatus: "",
     keyWord: "",
     todos: [
       { id: 1, content: "buy some milk", status: true },
@@ -43,36 +44,17 @@ class App extends Component {
   };
 
   showAllTodos = () => {
-    const todos = this.state.todos.map(todo => {
-      if (todo.status) {
-        todo.status = false;
-      }
-      return todo;
-    });
     this.setState({
-      todos: todos
+      keyWord: "",
+      optionStatus: ""
     });
   };
-  showComplitedTodos = () => {};
-  showActiveTodos = () => {};
-
-  // searchTodo = inputContent => {
-  //   let todos = this.state.todos.map(todo => {
-  //     let todoContent = todo.content.toLowerCase();
-  //     console.log("App", todo.content);
-  //     if (!todoContent.includes(inputContent) && inputContent !== "") {
-  //       console.log("true");
-  //       todo.hide = true;
-  //     } else {
-  //       console.log("false");
-  //       todo.hide = false;
-  //     }
-  //     return todo;
-  //   });
-  //   this.setState({
-  //     todos: todos
-  //   });
-  // };
+  showCompletedTodos = () => {
+    this.setState(prevState => ({ ...prevState, optionStatus: "completed" }));
+  };
+  showActiveTodos = () => {
+    this.setState(prevState => ({ ...prevState, optionStatus: "active" }));
+  };
 
   searchTodo = inputContent => {
     this.setState({
@@ -81,9 +63,17 @@ class App extends Component {
   };
 
   render() {
-    const filteredTodos = this.state.todos.filter(todo => {
-      return todo.content.includes(this.state.keyWord);
-    });
+    const { keyWord } = this.state;
+    const { optionStatus } = this.state;
+    let filteredTodos = this.state.todos.filter(todo =>
+      todo.content.toLowerCase().includes(keyWord)
+    );
+    if (optionStatus === "active") {
+      filteredTodos = filteredTodos.filter(todo => !todo.status);
+    } else if (optionStatus === "completed") {
+      filteredTodos = filteredTodos.filter(todo => todo.status);
+    }
+
     return (
       <div className="App">
         <header className="header">
@@ -99,7 +89,11 @@ class App extends Component {
             />
           </div>
           <AddTodo addTodo={this.addTodo} />
-          <TodoOptions />
+          <TodoOptions
+            showAllTodos={this.showAllTodos}
+            showCompletedTodos={this.showCompletedTodos}
+            showActiveTodos={this.showActiveTodos}
+          />
         </main>
       </div>
     );

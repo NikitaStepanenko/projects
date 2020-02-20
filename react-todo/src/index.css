@@ -181,7 +181,7 @@ body {
   cursor: pointer;
 }
 
-.complited-todos {
+.completed-todos {
   cursor: pointer;
 }
 
@@ -193,7 +193,7 @@ body {
   color: var(--hover-dark);
 }
 
-.complited-todos:hover {
+.completed-todos:hover {
   color: var(--hover-dark);
 }
 
