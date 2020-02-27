@@ -4,12 +4,18 @@ import Navbar from './components/NavBar/Navbar';
 import Users from './Pages/UsersPage/Users';
 import Projects from './Pages/ProjectsPage/Projects';
 import Home from './Pages/HomePage/Home';
-import styles from './App.css';
-import Container from '@material-ui/core/Container';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#32418C' },
+  },
+});
+
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" theme={theme}>
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
